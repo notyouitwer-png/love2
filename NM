@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ถึงน้ำมนต์ ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: "Tahoma", sans-serif;
+}
+
+/* การ์ด */
+.card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    max-width:400px;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1{ color:#ff4b6e; }
+
+button{
+    margin-top:20px;
+    padding:10px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff4b6e;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{ background:#ff1f4a; }
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-10px);}
+    100%{transform:translateY(0px);}
+}
+
+.heart{
+    font-size:40px;
+    animation: beat 1s infinite;
+}
+@keyframes beat{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.2);}
+    100%{transform:scale(1);}
+}
+
+#page2{
+    display:none;
+}
+img{
+    width:100%;
+    border-radius:15px;
+    margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- หน้าแรก -->
+<div class="card" id="page1">
+    <div class="heart">❤️</div>
+    <h1>ถึงน้ำมนต์</h1>
+    <p id="text">เหนื่อยมั้ยยยยยย</p>
+    <button onclick="changeText()">กดดูความลับ</button><br>
+    <button onclick="goPage2()">ไปหน้าต่อไป ➜</button>
+</div>
+
+<!-- หน้าที่ 2 -->
+<div class="card" id="page2">
+    <h1>ยิ้มหน่อยน้า 😊</h1>
+    <p>อันนี้ให้กำลังใจพิเศษเลย 💕</p>
+
+    <!-- ลิงก์ GIF -->
+    <img src="https://media.tenor.com/Pr1SLLaw6ssAAAAi/p1.gif"
+     alt="GIF สวยๆ"
+     style="width:100%; border-radius:15px;">
+
+
+    <p style="margin-top:15px;">พี่อยู่ข้างๆ เสมอนะ ❤️</p>
+</div>
+
+<script>
+function changeText(){
+    document.getElementById("text").innerHTML =
+    "สู้ๆนะ พี่เป็นกำลังใจให้นะ ❤️";
+}
+
+function goPage2(){
+    document.getElementById("page1").style.display="none";
+    document.getElementById("page2").style.display="block";
+}
+</script>
+
+</body>
+</html>
